@@ -4,9 +4,9 @@
   box-sizing: border-box;
 }
 :root {
-  --clr-one: #7c73e6;
+  --clr-one: #6262db;
   --clr-two: #c4c1e0;
-  --clr-three: #fafafa;
+  --clr-three: #e4e2e2;
 }
 body {
   font-family: "Quicksand", sans-serif;
@@ -28,7 +28,7 @@ body {
   border-radius: 10px;
 }
 .search-container {
-  width: 90%;
+  width: 80%;
 }
 .title-div {
   margin-bottom: 2rem;
@@ -45,7 +45,7 @@ body {
   color: var(--clr-one);
   font-family: "Quicksand", sans-serif;
   font-size: 1.2rem;
-  width: 70%;
+  width: 50%;
 }
 .search-btn {
   padding: 0.5rem 2rem;

@@ -24,9 +24,26 @@ searchBtn.addEventListener("click", () => {
       //rendering into HTML
       searchResult.innerHTML = `
   <img src="${data[0].flags.svg}" class="flag-img"/>
-      <p>${data[0].name.common}</p>
+      <p>Country: ${data[0].name.common}</p>
+      <p>Capitol: ${data[0].capital[0]}</p>
+      <p>Continent: ${data[0].continents[0]}</p>
+      <p>Populations: ${data[0].population}</p>
+      <p>Language: ${Object.values(data[0].languages)
+        .toString()
+        .split(",")
+        .join(", ")}</p>
+      <p>Currencies: ${
+        data[0].currencies[Object.keys(data[0].currencies)].name
+      }</p>
 
 
   `;
+    })
+    .catch(() => {
+      if (countryName.length === 0) {
+        searchResult.innerHTML = "*Input field cannot be empty*";
+      } else {
+        searchResult.innerHTML = "*Please enter a valid Country name*";
+      }
     });
 });
