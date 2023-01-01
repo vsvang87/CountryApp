@@ -10,6 +10,7 @@ searchBtn.addEventListener("click", () => {
   fetchUrl
     .then((response) => response.json())
     .then((data) => {
+      /*
       console.log(data);
       console.log(data[0].capital[0]);
       console.log(data[0].continents[0]);
@@ -20,21 +21,30 @@ searchBtn.addEventListener("click", () => {
       console.log(
         Object.values(data[0].languages).toString().split(",").join(", ")
       );
-
+*/
       //rendering into HTML
       searchResult.innerHTML = `
   <img src="${data[0].flags.svg}" class="flag-img"/>
-      <p>Country: ${data[0].name.common}</p>
-      <p>Capitol: ${data[0].capital[0]}</p>
-      <p>Continent: ${data[0].continents[0]}</p>
-      <p>Populations: ${data[0].population}</p>
-      <p>Language: ${Object.values(data[0].languages)
+  <h2>${data[0].name.common}</h2>
+  <div class="description"> 
+      <p><span class="country-name">Capitol: </span>${data[0].capital[0]}</p>
+      <p><span class="country-name">Continent: </span> ${
+        data[0].continents[0]
+      }</p>
+      <p> <span class="country-name">Populations: </span> ${
+        data[0].population
+      }</p>
+      <p> <span class="country-name">Language: </span> ${Object.values(
+        data[0].languages
+      )
         .toString()
         .split(",")
         .join(", ")}</p>
-      <p>Currencies: ${
+      <p> <span class="country-name">Currencies: </span> ${
         data[0].currencies[Object.keys(data[0].currencies)].name
       }</p>
+  </div>
+      
 
 
   `;

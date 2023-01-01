@@ -23,7 +23,7 @@ body {
   align-items: flex-start;
   padding-top: 2rem;
   width: 600px;
-  height: 500px;
+  height: 550px;
   background: var(--clr-three);
   border-radius: 10px;
 }
@@ -62,4 +62,13 @@ body {
 }
 .flag-img {
   width: 50%;
+}
+.description {
+  margin-top: 1rem;
+}
+.description p {
+  padding-bottom: 0.5rem;
+}
+.country-name {
+  font-weight: bold;
 }
