@@ -4,25 +4,15 @@ let searchResult = document.getElementById("results");
 
 searchBtn.addEventListener("click", () => {
   const countryName = searchInput.value;
+  //setting api to a variable
   const searchCountry = `https://restcountries.com/v3.1/name/${countryName}?fullText=true`;
-
+  //fetch api
   const fetchUrl = fetch(searchCountry);
   fetchUrl
     .then((response) => response.json())
     .then((data) => {
-      /*
-      console.log(data);
-      console.log(data[0].capital[0]);
-      console.log(data[0].continents[0]);
-      console.log(data[0].name.common);
-      console.log(data[0].flags.svg);
-      console.log(data[0].population);
-      console.log(data[0].currencies[Object.keys(data[0].currencies)].name);
-      console.log(
-        Object.values(data[0].languages).toString().split(",").join(", ")
-      );
-*/
-      //rendering into HTML
+      //grabbing data from api and rendering into HTML
+      //passing data from api inside template string
       searchResult.innerHTML = `
       <div class="flag-div">   
        <img src="${data[0].flags.svg}" class="flag-img"/>
@@ -52,6 +42,7 @@ searchBtn.addEventListener("click", () => {
 
   `;
     })
+    //catch error
     .catch(() => {
       if (countryName.length === 0) {
         searchResult.innerHTML = "*Input field cannot be empty*";
