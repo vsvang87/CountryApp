@@ -24,8 +24,11 @@ searchBtn.addEventListener("click", () => {
 */
       //rendering into HTML
       searchResult.innerHTML = `
-  <img src="${data[0].flags.svg}" class="flag-img"/>
+      <div class="flag-div">   
+       <img src="${data[0].flags.svg}" class="flag-img"/>
   <h2>${data[0].name.common}</h2>
+      </div>
+ 
   <div class="description"> 
       <p><span class="country-name">Capitol: </span>${data[0].capital[0]}</p>
       <p><span class="country-name">Continent: </span> ${

@@ -21,9 +21,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 2rem;
+  padding: 2rem;
   width: 600px;
-  height: 550px;
+  height: 660px;
   background: var(--clr-three);
   border-radius: 10px;
 }
@@ -46,6 +46,7 @@ body {
   font-family: "Quicksand", sans-serif;
   font-size: 1.2rem;
   width: 50%;
+  display: inline-block;
 }
 .search-btn {
   padding: 0.5rem 2rem;
@@ -60,15 +61,29 @@ body {
 .search-result {
   margin-top: 2rem;
 }
+
 .flag-img {
-  width: 50%;
+  width: 90%;
 }
 .description {
-  margin-top: 1rem;
+  margin-top: 1.8rem;
 }
 .description p {
   padding-bottom: 0.5rem;
 }
 .country-name {
   font-weight: bold;
+}
+
+@media (max-width: 595px) {
+  .container {
+    width: fit-content;
+    height: fit-content;
+  }
+}
+@media (max-width: 450px) {
+  .search-btn {
+    margin-top: 1rem;
+    margin-left: 0;
+  }
 }
