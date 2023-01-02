@@ -39,6 +39,7 @@ body {
   color: var(--clr-one);
 }
 .search-group input {
+  text-align: center;
   outline: none;
   border-top: none;
   border-left: none;
@@ -49,12 +50,12 @@ body {
   color: var(--clr-one);
   font-family: "Quicksand", sans-serif;
   font-size: 1.2rem;
-  width: 50%;
-  display: inline-block;
+  width: 100%;
 }
 .search-btn {
   padding: 0.5rem 2rem;
-  margin-left: 1rem;
+  margin-top: 1rem;
+  width: 100%;
   border: none;
   background: var(--clr-one);
   border-radius: 50px 50px;
@@ -67,7 +68,7 @@ body {
 }
 
 .flag-img {
-  width: 100%;
+  width: 88%;
 }
 .description {
   margin-top: 1.8rem;
@@ -84,10 +85,12 @@ body {
     width: fit-content;
     height: fit-content;
   }
+  .flag-img {
+    width: 100%;
+  }
 }
 @media (max-width: 450px) {
   .search-btn {
     margin-top: 1rem;
-    margin-left: 0;
   }
 }
