@@ -79,7 +79,9 @@ body {
 .country-name {
   font-weight: bold;
 }
-
+.country-title {
+  padding-bottom: 0.5rem;
+}
 @media (max-width: 595px) {
   .container {
     width: fit-content;

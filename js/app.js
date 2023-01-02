@@ -15,8 +15,9 @@ searchBtn.addEventListener("click", () => {
       //passing data from api inside template string
       searchResult.innerHTML = `
       <div class="flag-div">   
+      <h2 class="country-title">${data[0].name.common}</h2>
        <img src="${data[0].flags.svg}" class="flag-img"/>
-  <h2>${data[0].name.common}</h2>
+  
       </div>
  
   <div class="description"> 
